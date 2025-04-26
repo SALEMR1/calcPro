@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>متجر عمليات حسابيه</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>احسب السعر</h1>
+
+        <label for="price">سعر المنتج</label>
+        <input type="number" id="price" placeholder="ادخل السعر">
+
+        <label for="quantity">ادخل الكمية</label>
+        <input type="number" id="quantity" placeholder="الكمية">
+
+        <button onclick="calculateTotal()">احسب الاجمالي</button>
+
+        <h2 id="total">الإجمالي : 0 جنيه</h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
