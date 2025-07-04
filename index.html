@@ -1,25 +1,88 @@
-
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>متجر عمليات حسابيه</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل طلاب مستر احمد سالم</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KZCGFV2DS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0KZCGFV2DS');
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>احسب السعر</h1>
+        <header>
+            <img src="احمد سالم.png" alt="الأستاذ أحمد سالم" class="teacher-photo">
+            <h1>مستر احمد سالم</h1>
+            <p>متخصص في تأسيس وتدريس اللغة العربية للمرحلتين الابتدائية والإعدادية</p>
+        </header>
+        <main>
+            <form id="registration-form">
+                <h2>بيانات الطالب</h2>
+                <div class="form-group">
+                    <label for="student-name">اسم الطالب بالكامل</label>
+                    <input type="text" id="student-name" name="student-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="grade">الصف الدراسي</label>
+                    <select id="grade" name="grade" required>
+                        <option value="" disabled selected>اختر الصف</option>
+                        <optgroup label="المرحلة الابتدائية">
+                            <option value="الأول الابتدائي">الأول الابتدائي</option>
+                            <option value="الثاني الابتدائي">الثاني الابتدائي</option>
+                            <option value="الثالث الابتدائي">الثالث الابتدائي</option>
+                            <option value="الرابع الابتدائي">الرابع الابتدائي</option>
+                            <option value="الخامس الابتدائي">الخامس الابتدائي</option>
+                            <option value="السادس الابتدائي">السادس الابتدائي</option>
+                        </optgroup>
+                        <optgroup label="المرحلة الإعدادية">
+                            <option value="الأول الإعدادي">الأول الإعدادي</option>
+                            <option value="الثاني الإعدادي">الثاني الإعدادي</option>
+                            <option value="الثالث الإعدادي">الثالث الإعدادي</option>
+                        </optgroup>
+                    </select>
+                </div>
 
-        <label for="price">سعر المنتج</label>
-        <input type="number" id="price" placeholder="ادخل السعر">
+                <div class="form-group">
+                    <label for="group-selection">اختر المجموعة المناسبة</label>
+                    <select id="group-selection" name="group-selection" required>
+                        <option value="" disabled selected>-- اختر مكان ومواعيد الحصص --</option>
+                        <optgroup label="مجموعات قرية واحد (الأحد، الاثنين، الأربعاء، الخميس)">
+                            <option value="المرحلة الابتدائية - قرية واحد">المرحلة الابتدائية</option>
+                            <option value="المرحلة الإعدادية - قرية واحد">المرحلة الإعدادية</option>
+                        </optgroup>
+                        <optgroup label="مجموعات طرمباط حلق الجمل (السبت، الثلاثاء)">
+                            <option value="المرحلة الابتدائية - طرمباط">المرحلة الابتدائية</option>
+                            <option value="المرحلة الإعدادية - طرمباط">المرحلة الإعدادية</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="parent-phone">رقم هاتف ولي الأمر</label>
+                    <input type="tel" id="parent-phone" name="parent-phone" required>
+                </div>
 
-        <label for="quantity">ادخل الكمية</label>
-        <input type="number" id="quantity" placeholder="الكمية">
+                <div class="form-group">
+                    <label for="address">العنوان</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
 
-        <button onclick="calculateTotal()">احسب الاجمالي</button>
-
-        <h2 id="total">الإجمالي : 0 جنيه</h2>
+                <button type="submit">تسجيل الآن</button>
+            </form>
+            <div id="success-message" class="hidden">
+                <p>ممتاز! سيتم الآن فتح واتساب لإرسال بياناتك للأستاذ أحمد. اضغط "إرسال" في واتساب لتأكيد التسجيل.</p>
+            </div>
+        </main>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
